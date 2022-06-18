@@ -1,0 +1,33 @@
+
+<div class="container text-center">
+  <h1>Modify Movie</h1>
+</div>
+<div class="container text-center col-6">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)" *ngIf="previousMovie!=null ; else espera">
+    <div class="form-group" >
+      <label for="title">Movie's Title</label>
+      <input type="text" class="form-control " id="title"  [ngModel]="previousMovie.title" ngModel name="title">
+    </div>
+    <div class="form-group">
+      <label for="year">Movie's year</label>
+      <input type="text" class="form-control" id="year"  [ngModel]="previousMovie.year" required ngModel name="year" placeholder="Enter year">
+    </div>
+    <div class="form-group">
+      <label for="director">Movie's director</label>
+      <input type="text" class="form-control" id="director"    [ngModel]="previousMovie.director" required ngModel name="director" placeholder="Enter director's name">
+    </div>
+
+    <div class="form-group">
+      <label for="imgurl">Movie's image Url</label>
+      <input type="text" class="form-control" id="imgurl"  [ngModel]="previousMovie.img" required  ngModel name="imgurl"placeholder="Enter image url">
+    </div>
+
+
+
+
+    <button type="submit" [disabled]="form.invalid" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>
+
+<ng-template #espera>Esperando datos del componente</ng-template>
+

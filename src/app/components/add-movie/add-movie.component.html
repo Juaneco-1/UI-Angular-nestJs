@@ -1,0 +1,26 @@
+<div class="container text-center col-6">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="form-group">
+      <label for="title">Movie's Title</label>
+      <input type="text" class="form-control " id="title"  ngModel name="title" placeholder="Enter title">
+    </div>
+    <div class="form-group">
+      <label for="year">Movie's year</label>
+      <input type="text" class="form-control" id="year"  ngModel name="year" placeholder="Enter year">
+    </div>
+    <div class="form-group">
+      <label for="director">Movie's director</label>
+      <input type="text" class="form-control" id="director"   ngModel name="director" placeholder="Enter director's name">
+    </div>
+
+    <div class="form-group">
+      <label for="imgurl">Movie's image Url</label>
+      <input type="text" class="form-control" id="imgurl"  ngModel name="imgurl"placeholder="Enter image url">
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>
